@@ -1,13 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Files</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f8f9fa;
+      padding: 40px 20px;
+      color: #333;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    
+    h1 {
+      padding: 30px;
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #2c3e50;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .file-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .file-row {
+      display: flex;
+      align-items: center;
+      padding: 20px 30px;
+      border-bottom: 1px solid #eee;
+      transition: background-color 0.2s ease;
+    }
+    
+    .file-row:hover {
+      background-color: #f8f9fa;
+    }
+    
+    .file-row:last-child {
+      border-bottom: none;
+    }
+    
+    .file-icon {
+      font-size: 1.5rem;
+      margin-right: 15px;
+      width: 30px;
+      text-align: center;
+    }
+    
+    .file-name {
+      flex: 1;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #2c3e50;
+      margin-right: 20px;
+    }
+    
+    .file-type {
+      background: #e9ecef;
+      color: #6c757d;
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-right: 20px;
+      min-width: 50px;
+      text-align: center;
+    }
+    
+    .download-btn {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+    
+    .download-btn:hover {
+      background: #0056b3;
+    }
+    
+    @media (max-width: 600px) {
+      .file-row {
+        padding: 15px 20px;
+      }
+      
+      .file-name {
+        font-size: 0.9rem;
+        margin-right: 10px;
+      }
+      
+      .file-type {
+        margin-right: 10px;
+        min-width: 40px;
+        font-size: 0.7rem;
+      }
+      
+      .download-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div>
-        <h1>hello</h1>
-    </div>
+  <div class="container">
+    <h1>Tanvir Azad Docs</h1>
+    
+    <ul class="file-list">
+      <li class="file-row">
+        <span class="file-icon">🖼️</span>
+        <span class="file-name">Passport Size Photo</span>
+        <span class="file-type">JPG</span>
+        <a href="assets/tanvir_azad.jpg" class="download-btn" download>Download</a>
+      </li>
+      
+      <li class="file-row">
+        <span class="file-icon">🏦</span>
+        <span class="file-name">Bank Statement</span>
+        <span class="file-type">PDF</span>
+        <a href="assets/Tanvir_Commerzbank_Balance.pdf" class="download-btn" download>Download</a>
+      </li>
+      
+      <li class="file-row">
+        <span class="file-icon">🛡️</span>
+        <span class="file-name">Insurance Paper</span>
+        <span class="file-type">PDF</span>
+        <a href="assets/Tanvir_Insurance.pdf" class="download-btn" download>Download</a>
+      </li>
+      
+      <li class="file-row">
+        <span class="file-icon">💼</span>
+        <span class="file-name">Job Contract</span>
+        <span class="file-type">PDF</span>
+        <a href="assets/Tanvir_Job_Contract.pdf" class="download-btn" download>Download</a>
+      </li>
+      
+      <li class="file-row">
+        <span class="file-icon">📖</span>
+        <span class="file-name">Passport Scan</span>
+        <span class="file-type">PDF</span>
+        <a href="assets/Tanvir_Passport.pdf" class="download-btn" download>Download</a>
+      </li>
+      
+      <li class="file-row">
+        <span class="file-icon">✈️</span>
+        <span class="file-name">Visa Scan</span>
+        <span class="file-type">PDF</span>
+        <a href="assets/Tanvir_Visa.pdf" class="download-btn" download>Download</a>
+      </li>
+    </ul>
+  </div>
 </body>
 </html>
